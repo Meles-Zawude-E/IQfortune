@@ -1,0 +1,127 @@
+
+footer {
+    background: black;
+    padding: 2px 0;
+    height: 44vh;
+  }
+  
+  .foot>li {
+    list-style-type: none;
+    margin-top: 15px;
+  }
+  
+  .scl-mda {
+    margin-top: 10rem;
+  }
+  
+  .scl-mda>li i {
+    margin-left: 1.5rem;
+  }
+  
+  .font {
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .font li {
+    margin: 6px;
+  }
+  
+  hr {
+    color: white !important;
+    width: 100%;
+  }
+  
+  .sol ul li {
+    height: 40px;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  .foot li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .foot li a:hover {
+    padding-left: 6px;
+    color: wheat;
+  }
+  
+  .foot ul li {
+    font-size: 16px;
+    margin-left: 4px;
+  }
+@media screen and (max-width: 767px) {
+    /* CSS rules for screens with a maximum width of 767px */
+    footer{
+        display: flex;
+        height: 88%;
+        margin-left: 0px;
+    }
+    .scl-mda{
+        margin-top: 1rem;
+    }
+    .foot.mx-5{
+     margin-left: 0px !important;
+    }
+    .youtubeLinkedInTwiter .foot.mx-5 li ,.youtubeLinkedInTwiter{
+        margin-left: 0px !important;
+        margin-top: 0rem !important;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    /* CSS rules for screens with a minimum width of 768px and maximum width of 991px */
+    footer{
+        display: flex;
+        height: 88%;
+        margin-left: 0px;
+    }
+    .scl-mda{
+        margin-top: 1rem;
+    } .foot.mx-5{
+        margin-left: 0px !important;
+       }
+       .youtubeLinkedInTwiter .foot.mx-5 li,.youtubeLinkedInTwiter{
+        margin-left: 0px !important;
+        margin-top: 0rem !important;
+    }
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    /* CSS rules for screens with a minimum width of 992px and maximum width of 1199px */
+    footer{
+        display: flex;
+        height: 45%;
+        margin-left: 0px;
+    } .foot.mx-5{
+        margin-left: 0px !important;
+       }
+       .youtubeLinkedInTwiter .foot.mx-5 li,.youtubeLinkedInTwiter{
+        margin-left: 0px !important;
+        margin-top: 0rem !important;
+    }
+    
+  }
+  
+  @media screen and (min-width: 1200px) {
+    /* CSS rules for screens with a minimum width of 1200px */
+    footer{
+        display: flex;
+        height: 49%;
+        margin-left: 0px;
+    } .foot.mx-5{
+        margin-left: 0px !important;
+       }
+       .youtubeLinkedInTwiter .foot.mx-5 li ,.youtubeLinkedInTwiter{
+        margin-left: 0px !important;
+        margin-top: 0rem !important;
+    }
+       
+  }
+  
