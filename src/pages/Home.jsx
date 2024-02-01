@@ -17,12 +17,8 @@ import HP from '../assets/hp.png'
 import SinerLine from '../assets/sinarline-copy.png'
 import Richo from '../assets/ricoh-copy.png'
 import Unomat from '../assets/unomat-copy.png'
-// import BackgroundSlider from 'react-background-slider'
-// import Ses1 from '../assets/ses.jpg'
-// import Ses2 from '../assets/ses.jpg'
-// import OilSeed from '../assets/oilsed2.jpg'
-// import OilSeed2 from '../assets/oilseed12.jpg'
-// import Pul from '../assets/pul1.jpg'
+import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg'
+
 export default function Home() {
   const stripedRowImages = [delImage, cannonImage, ciscoImage,  HP, SinerLine, Richo, Unomat];
 
@@ -40,17 +36,23 @@ export default function Home() {
   return (
     <div>
       <div className="first-face">
-      {/* <BackgroundSlider
-        images={[Pul, Ses1,Ses2,OilSeed,OilSeed2]} duration={10} transition={2} /> */}
-        <h1 className='mb-4'>YOUR ONE STOP SOLUTION FOR OFFICE EQUIPMENTS!</h1>
-        <h3>A Pioneer Business</h3>
-        <p>
-          IQ Fortune Advanced Technology P.L.C. is engaged in selling computers,
-          network equipment, office machinery, and computer accessories with good
-          reputations and business success.
-        </p>
-        <button className="btn-r"><a href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html">
-        Canon Authorised Service Center</a></button>
+        <div className="text-column">
+          <h2 className='mb-4'>YOUR ONE STOP SOLUTION FOR OFFICE EQUIPMENTS!</h2>
+          <h3>A Pioneer Business</h3>
+          <p>
+            IQ Fortune Advanced Technology P.L.C. is engaged in selling computers,
+            network equipment, office machinery, and computer accessories with good
+            reputations and business success.
+          </p>
+          <button className="btn-r">
+            <a href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html">
+              Canon Authorised Service Center
+            </a>
+          </button>
+        </div>
+        <div className="image-column">
+          <img src={Printer} alt="Canon" style={{height:"100%"}}/>
+        </div>
       </div>
 
       <div className='container mt-5'>
@@ -66,7 +68,7 @@ export default function Home() {
       <hr style={{ color: "red" }} />
       <hr />
 
-      <div className="container mt-5 border border-light mb-5">
+      <div className="container mt-5 border border-light mb-5 disp-card">
         <div className="row">
           <div className="column">
             <div className="card">
@@ -97,23 +99,23 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='container mt-2'>
+      <div className='container mt-2 disp-card'>
         <h3 className='mb-5'>OUR FORTUE TO SUCCESS</h3>
         <div className='row'>
           <div className='center-head'>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+            <div className='col-lg-4 '>
               <img src={Will} alt="" className='img-circle' />
               <div className="badge">01</div>
               <h4>Goodwill</h4>
               <p>Generating brand recognition ”Authorized Agent” through different marketing.</p>
             </div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+            <div className='col-lg-4 '>
               <img src={Quality} alt="" />
               <div className="badge">02</div>
               <h4>Quality</h4>
               <p>Providing quality products right the first time, offering 100% guarantee.</p>
             </div>
-            <div className='col-lg-4 col -lg-4 col-md-6 col-sm-12'>
+            <div className='col-lg-4 '>
               <img src={Responseviness} alt="" />
               <div className="badge">03</div>
               <h4>Responsiveness</h4>
@@ -123,13 +125,13 @@ export default function Home() {
         </div>
         <div className='row'>
           <div className='center-head'>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+            <div className='col-lg-4 '>
               <img src={Trust} alt="" className='img-circle' />
               <div className="badge">04</div>
               <h4>Trust</h4>
               <p>Building trust with customers through transparent and ethical business practices.</p>
             </div>
-            <div className='col-lg-4 col-md-6 col-sm-12'>
+            <div className='col-lg-4 '>
               <img src={Relations} alt="" />
               <div className="badge">05</div>
               <h4>Customer Relations</h4>
@@ -138,6 +140,14 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className='f-p mt-5'>
+        <h3 style={{fontFamily:"Montserrat"}}>CHECK OUR VARIOUS SERVICES</h3>
+        <p>IQFortune Advanced Technology will serve you as one stop solution for<p>all your office IT needs.</p> </p>
+        
+        <button className='btn-r'><a href="#">Check Now</a></button>
+      </div>
+     
     </div>
+    
   );
 }

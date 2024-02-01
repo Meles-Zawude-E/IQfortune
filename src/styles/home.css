@@ -1,17 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora&family=Montserrat&family=Open+Sans&family=Roboto:wght@400;900&display=swap');
 
 .first-face {
-  height: 80vh;
-  background-image: url('../assets/coffee.jpg');
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(240, 240, 240, 0.8), rgba(240, 240, 240, 0.8));
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 50px; 
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
+.text-column {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.image-column {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  height: 450px;
+
+}
+
+.image-column img {
+  width: 100%;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.first-face h2,
+.first-face h3{
+  text-align: center;
+  font-family: 'Montserrat';
+  
+}
+.first-face .btn-r,
+.first-face p {
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10px;
+}
+
+.first-face p {
+  width: 30rem;
+  margin-left: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: justify;
+}
 .btn-r {
   display: inline-block;
   padding: 10px 20px;
@@ -31,21 +72,7 @@
   color: #fff;
 }
 
-.first-face h1,
-.first-face h3,
-.first-face .btn-r,
-.first-face p {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-}
 
-.first-face p {
-  width: 40rem;
-  margin: 20px auto;
-  font-size: 1.2em;
-  line-height: 1.5;
-  text-align: justify;
-}
 
 
 .center-head,
@@ -201,6 +228,12 @@ a {
   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
   transform: scale(1.1);
 }
+.f-p{
+  text-align: center;
+  font-family: 'Roboto',sans-serif;
+  padding: 20px;
+  
+}
 
 .row::after {
   content: "";
@@ -208,8 +241,44 @@ a {
   display: table;
 }
 @media (max-width: 768px) {
-  .column {
+  .first-face {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-column {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+
+  .image-column {
+    order: -1;
+    margin-top: 20px;
+  }
+
+  .first-face p {
     width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .btn-r {
+    margin: 20px auto;
   }
 }
 
+@media (max-width: 1115px) {
+  .column {
+    width: 100%;
+  }
+  .first-face {
+    width: 100%;
+    text-align: center;
+  }
+
+  .first-face p {
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+}

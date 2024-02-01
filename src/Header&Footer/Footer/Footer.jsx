@@ -10,8 +10,7 @@ export default function Footer() {
               <ul className='foot mx-5'>
                 <strong>Menu</strong>
                 <li><i className="fa-solid fa-house"></i><a href="/" className="">  Home</a></li>
-                <li><i className="fa-solid fa-earth-americas"></i><a href="https://moe.gov.et/News" className="">  News</a> </li>
-                <li><i className="fa-solid fa-signal"></i> <a href="/" className="" >  Statistics</a> </li>
+                <li><i className="fa-solid fa-earth-americas"></i><a href="#" className="">  News</a> </li>
                 <li><i className="fa-solid fa-message"></i><a href="/contact-us" className="">
                   Contact Us</a> </li>
               </ul>
