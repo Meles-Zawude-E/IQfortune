@@ -313,23 +313,5 @@ a {
   }
 }
 
-@media (min-width: 1115px) {
-  .column {
-    width: 100%;
-  }
-  .first-face {
-    width: 100%;
-    text-align: center;
-  }
 
-  .first-face p {
-    width: 100%;
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .image-column img {
-    margin-top: 20px;
-  }
-}
 
