@@ -12,8 +12,6 @@ function Header() {
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
     setSticky(currentScrollY > 0);
-
-    // Adjust the threshold as needed
     setShrunk(currentScrollY > 50);
   };
 

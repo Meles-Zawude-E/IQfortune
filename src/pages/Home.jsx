@@ -18,6 +18,9 @@ import SinerLine from '../assets/sinarline-copy.png'
 import Richo from '../assets/ricoh-copy.png'
 import Unomat from '../assets/unomat-copy.png'
 import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg'
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link';
+
 
 export default function Home() {
   const stripedRowImages = [delImage, cannonImage, ciscoImage,  HP, SinerLine, Richo, Unomat];
@@ -34,6 +37,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div>
       <div className="first-face">
         <div className="text-column">
@@ -44,11 +48,15 @@ export default function Home() {
             network equipment, office machinery, and computer accessories with good
             reputations and business success.
           </p>
-          <button className="btn-r">
-            <a href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html">
-              Canon Authorised Service Center
-            </a>
-          </button>
+         
+
+          <Button variant="contained" component="button" sx={{height:"50px"}}>
+           <Link href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html" 
+           color="inherit" style={{textDecoration: "none"}}>
+             Canon Authorised Service Center
+           </Link>
+          </Button>
+          
         </div>
         <div className="image-column">
           <img src={Printer} alt="Canon" style={{height:"100%"}}/>
@@ -100,7 +108,7 @@ export default function Home() {
       </div>
 
       <div className='container mt-2 disp-card'>
-        <h3 className='mb-5'>OUR FORTUE TO SUCCESS</h3>
+        <h2 className='mb-5'>OUR FORTUE TO SUCCESS</h2>
         <div className='row'>
           <div className='center-head'>
             <div className='col-lg-4 '>
@@ -141,13 +149,13 @@ export default function Home() {
         </div>
       </div>
       <div className='f-p mt-5'>
-        <h3 style={{fontFamily:"Montserrat"}}>CHECK OUR VARIOUS SERVICES</h3>
+        <h2 style={{fontFamily:"Montserrat"}}>CHECK OUR VARIOUS SERVICES</h2>
         <p>IQFortune Advanced Technology will serve you as one stop solution for<p>all your office IT needs.</p> </p>
         
         <button className='btn-r'><a href="#">Check Now</a></button>
       </div>
-     
     </div>
+    </>
     
   );
 }
