@@ -1,4 +1,4 @@
-import Slider from 'react-slick';
+
 import '../styles/home.css';
 import delImage from '../assets/del.png';
 import cannonImage from '../assets/cannon.png';
@@ -18,24 +18,25 @@ import SinerLine from '../assets/sinarline-copy.png'
 import Richo from '../assets/ricoh-copy.png'
 import Unomat from '../assets/unomat-copy.png'
 import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg'
-import Button from '@mui/material/Button';
+import Export from '../assets/images/Export.jpg'
 import Link from '@mui/material/Link';
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import '@splidejs/splide/css';
+import { Card, CardContent, Typography, Button, Grid } from '@mui/material';
 
-
+// import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 export default function Home() {
   const stripedRowImages = [delImage, cannonImage, ciscoImage,  HP, SinerLine, Richo, Unomat];
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    customStyles: {
-      maxHeight: '100px', 
+  const splideOptions = {
+    type: 'slide',
+    width: '100%',
+    perPage: 5,
+    pagination: false, // Disable pagination if not needed
+    autoplay: {
+      enabled: true,
     },
   };
-
   return (
     <>
     <div>
@@ -43,19 +44,27 @@ export default function Home() {
         <div className="text-column">
           <h2 className='mb-4'>YOUR ONE STOP SOLUTION FOR OFFICE EQUIPMENTS!</h2>
           <h3>A Pioneer Business</h3>
-          <p>
+          <Typography variant='p' sx={{ fontSize: '1rem', align: 'justify' }}>
             IQ Fortune Advanced Technology P.L.C. is engaged in selling computers,
             network equipment, office machinery, and computer accessories with good
             reputations and business success.
-          </p>
-         
-
-          <Button variant="contained" component="button" color='error' size='large' sx={{height:"210px" ,width:"90%"}}>
+          </Typography>
+        
+          <Grid >
+        <Grid item xs={12} md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1px' }}>
+          <Card style={{ height: '300px',width:"90%",backgroundImage:`url(${Export})`,backgroundRepeat:'no-repeat',opacity:1,backgroundSize:'cover', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}} >
+            <CardContent >
+          <Button variant="contained" component="button" color='primary' size='large' >
            <Link href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html" 
-           color="inherit" style={{textDecoration: "none"}}>
+           color="inherit" style={{textDecoration: "none",}}>
             BIGGER
            </Link>
-          </Button>
+          </Button>  
+            </CardContent>
+          </Card>
+        </Grid>
+        </Grid>
+         
           
         </div>
         <div className="image-column">
@@ -64,13 +73,13 @@ export default function Home() {
       </div>
 
       <div className='container mt-5'>
-        <Slider {...sliderSettings}>
-          {stripedRowImages.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Image ${index + 1}`} style={{ maxWidth: '100%', height: '70px' }} />
-            </div>
-          ))}
-        </Slider>
+         <Splide options={splideOptions} className="custom-splide mx-auto">
+        {stripedRowImages.map((image, index) => (
+          <SplideSlide key={index} >
+            <img src={image} alt={`Image ${index + 1}`} style={{ maxWidth: '100%', height: '100px',marginLeft:"1.5rem" }} />
+          </SplideSlide>
+        ))}
+      </Splide>
       </div>
 
       <hr style={{ color: "red" }} />
@@ -87,7 +96,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="column">
+
+<div className="column">
             <div className="card">
               <img src={BigEpson} alt="Jane" style={{ width: "100%" }} />
               <div className="mt-container">
@@ -149,7 +159,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-    </>
+  </>
     
   );
 }

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import CardMedia from '@mui/material/CardMedia';
 import Stack from '@mui/material/Stack';
+import { useMediaQuery } from '@mui/material';
 import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
 import SinerLine from '../assets/images/landmark-1.png';
 import Richo from '../assets/images/settings-1.png';
@@ -84,89 +85,102 @@ ImageCard.propTypes = {
   imageWidth: PropTypes.number.isRequired,
 };
 
-const AboutUs = () => (
-  <div>
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'justify', flexWrap: 'wrap', marginTop:'50px'}}>
-      <ParagraphCard 
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
-      />
-      <ImageCard
-        image={Printer}
-        imageHeight={300}
-        imageWidth={300}
-      />
-      <ImageCard
-        image={Printer}
-        imageHeight={300}
-        imageWidth={300}
-      />
-      <ParagraphCard
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
-      />
-      <ParagraphCard
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
-      />
-      <ImageCard
-        image={Printer}
-        imageHeight={300}
-        imageWidth={300}
-      />
-    </div>
+const AboutUs = () => {
+  const isSmallScreen = useMediaQuery('(max-width:600px)');
+
+  return (
     <div>
-      {productsData.map((row, rowIndex) => (
-        <Stack
-          key={rowIndex}
-          direction="row"
-          spacing={8} 
-          justifyContent="center"
-          alignItems="center"
-          flexWrap="wrap"
-          style={{ marginTop: '40px', padding: '20px' }}
-        >
-          {row.map((product, index) => (
-            <Stack
-              key={index}
-              direction="column"
-              alignItems="center"
-              spacing={1}
-              sx={{ width: '100%', '@media (min-width: 600px)': { width: '48%' }, '@media (min-width: 768px)': { width: '15%' } }}
-            >
-              <Avatar
-                alt={product.name}
-                src={product.image}
-                className="avatar"
-                sx={{
-                  width: '70%',  
-                  height: '80%',
-                  border: '2px solid #000',
-                  borderRadius: '50%',
-                  overflow: 'hidden',
-                }}
-              />
-              <Typography variant="subtitle1">{product.name}</Typography>
-            </Stack>
-          ))}
-        </Stack>
-      ))}
-    </div>
-    <div style={{ 
-      display: 'flex', 
-      justifyContent: 'center', 
-      alignItems: 'center', 
-      textAlign: 'justify', 
-      flexWrap: 'wrap', 
-      marginLeft: '30px', 
-      marginRight: '30px',
-    }}>
-      {Array.from({ length: 3 }).map((_, index) => (
-        <CardSection
-          key={index}
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
-          style={{ flex: 1, maxWidth: '350px', margin: '10px' }}
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'justify', flexWrap: 'wrap', marginTop:'50px'}}>
+        <ParagraphCard 
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
         />
-      ))}
+        <ImageCard
+          image={Printer}
+          imageHeight={300}
+          imageWidth={300}
+        />
+        <ImageCard
+          image={Printer}
+          imageHeight={300}
+          imageWidth={300}
+        />
+        <ParagraphCard
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
+        />
+        <ParagraphCard
+          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
+        />
+        <ImageCard
+          image={Printer}
+          imageHeight={300}
+          imageWidth={300}
+        />
+      </div>
+      <div>
+        {productsData.map((row, rowIndex) => (
+          <Stack
+            key={rowIndex}
+            direction="row"
+            spacing={8} 
+            justifyContent="center"
+            alignItems="center"
+            flexWrap="wrap"
+            style={{ marginTop: '40px', padding: '20px' }}
+          >
+            {row.map((product, index) => (
+              <Stack
+                key={index}
+                direction="column"
+                alignItems="center"
+                spacing={1}
+                sx={{ width: '100%', '@media (min-width: 600px)': { width: '48%' }, '@media (min-width: 768px)': { width: '15%' } }}
+              >
+                <Avatar
+                  alt={product.name}
+                  src={product.image}
+                  className="avatar"
+                  sx={{
+                    width: '70%',  
+                    height: '80%',
+                    border: '2px solid #000',
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                  }}
+                />
+                <Typography variant="subtitle1">{product.name}</Typography>
+              </Stack>
+            ))}
+          </Stack>
+        ))}
+      </div>
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        textAlign: 'justify', 
+        flexWrap: 'wrap', 
+        marginLeft: '30px', 
+        marginRight: '30px',
+      }}>
+        {Array.from({ length: 3 }).map((_, index) => (
+          <CardSection
+            key={index}
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
+            style={{ 
+              flex: 1, 
+              maxWidth: isSmallScreen ? '100%' : '350px', 
+              margin: '10px',
+              '@media (max-width: 600px)': {
+                flex: 1,
+                maxWidth: '100%',
+                margin: '10px',
+              },
+            }}
+          />
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 export default AboutUs;
