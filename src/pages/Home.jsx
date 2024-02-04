@@ -50,10 +50,10 @@ export default function Home() {
           </p>
          
 
-          <Button variant="contained" component="button" sx={{height:"50px"}}>
+          <Button variant="contained" component="button" color='error' size='large' sx={{height:"210px" ,width:"90%"}}>
            <Link href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html" 
            color="inherit" style={{textDecoration: "none"}}>
-             Canon Authorised Service Center
+            BIGGER
            </Link>
           </Button>
           
@@ -133,13 +133,13 @@ export default function Home() {
         </div>
         <div className='row'>
           <div className='center-head'>
-            <div className='col-lg-4 '>
+            <div className='col-lg-6'>
               <img src={Trust} alt="" className='img-circle' />
               <div className="badge">04</div>
               <h4>Trust</h4>
               <p>Building trust with customers through transparent and ethical business practices.</p>
             </div>
-            <div className='col-lg-4 '>
+            <div className='col-lg-6'>
               <img src={Relations} alt="" />
               <div className="badge">05</div>
               <h4>Customer Relations</h4>
@@ -147,12 +147,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div className='f-p mt-5'>
-        <h2 style={{fontFamily:"Montserrat"}}>CHECK OUR VARIOUS SERVICES</h2>
-        <p>IQFortune Advanced Technology will serve you as one stop solution for<p>all your office IT needs.</p> </p>
-        
-        <button className='btn-r'><a href="#">Check Now</a></button>
       </div>
     </div>
     </>

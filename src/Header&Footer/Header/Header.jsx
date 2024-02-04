@@ -1,96 +1,143 @@
-// Header.js
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import './header.css';
+import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button, InputBase } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../../assets/logo.png';
 
-function Header() {
-  const [isSticky, setSticky] = useState(false);
-  const [isShrunk, setShrunk] = useState(false);
-  const [isSearchOpen, setSearchOpen] = useState(false);
+const pages = ['Services', 'About Us', 'Contact Us', 'Request'];
 
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
-    setSticky(currentScrollY > 0);
-    setShrunk(currentScrollY > 50);
+function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(null);
+  const [isSearchOpen, setSearchOpen] = useState(false);
+  const [isProductsMenuOpen, setProductsMenuOpen] = useState(null);
+
+  const handleMenuOpen = (event) => {
+    setMenuOpen(event.currentTarget);
   };
 
-  const handleSearchClick = () => {
+  const handleMenuClose = () => {
+    setMenuOpen(null);
+  };
+
+  const handleSearchToggle = () => {
     setSearchOpen(!isSearchOpen);
   };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+  const handleProductsMenuOpen = (event) => {
+    setProductsMenuOpen(event.currentTarget);
+  };
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const handleProductsMenuClose = () => {
+    setProductsMenuOpen(null);
+  };
 
   return (
-    <div className={`all ${isSticky ? 'sticky' : ''} ${isShrunk ? 'shrink' : ''}`}>
-      <div className='container'>
-        <div className='navbar navbar-expand-lg font-weight-bold '>
-          <div className="container-fluid ml-3">
-            <ul className='navbar-nav logos'>
-              <li>
-                <NavLink to="/">
-                  <img src={Logo} alt="Logo" />
-                </NavLink>
-              </li>
-            </ul>
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul className='navbar-nav all-nav'>
-                <li className='nav-item'>
-                  <NavLink to="/" exact className='nav-link'>
-                    Home
-                  </NavLink>
-                </li>
-                <li className='nav-item'>
-                  <NavLink to="/services" className='nav-link'>
-                    Services
-                  </NavLink>
-                </li>
-                <li className='nav-item'>
-                  <NavLink to="/products" className='nav-link'>
-                    Products
-                  </NavLink>
-                </li>
-                <li className='nav-item'>
-                  <NavLink to="/about-us" className='nav-link'>
-                    About Us
-                  </NavLink>
-                </li>
-                <li className='nav-item'>
-                  <NavLink to="/contact-us" className='nav-link'>
-                    Contact Us
-                  </NavLink>
-                </li>
-                <li className='nav-item'>
-                  <NavLink to="/blog" className='nav-link'>
-                    Export
-                  </NavLink>
-                </li>
-                <li className='nav-item'>
-                  <span className='nav-link' onClick={handleSearchClick}>
-                     <i className="fa-solid fa-magnifying-glass"></i>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        {isSearchOpen && (
-          <div className="search-box">
-           
-            <input type="text" placeholder="Search..." className="search-input"/>
-          </div>
-        )}
-      </div>
-    </div>
+    <AppBar position="sticky">
+      <Toolbar>
+        <IconButton color="inherit" onClick={handleMenuOpen} sx={{ marginRight: '10px', display: { xs: 'block', md: 'none' } }}>
+          <MenuIcon />
+        </IconButton>
+
+        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', marginLeft:'80px' }}>
+          <Typography variant="h6" noWrap>
+            <img src={Logo} alt="Logo" style={{ width: '120px', height: '40px' }} />
+          </Typography>
+        </Box>
+
+        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Button color="inherit" component={NavLink} to="/" style={{ textDecoration: 'none', color: 'inherit', marginRight: '10px' }}>
+            Home
+          </Button>
+
+          <Button
+            color="inherit"
+            onClick={handleProductsMenuOpen}
+            aria-haspopup="true"
+            aria-controls="products-menu"
+            style={{ textDecoration: 'none', color: 'inherit', marginRight: '10px' }}
+          >
+            Products
+          </Button>
+          <Menu
+            id="products-menu"
+            anchorEl={isProductsMenuOpen}
+            open={Boolean(isProductsMenuOpen)}
+            onClose={handleProductsMenuClose}
+          >
+            <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/import">
+              Import
+            </MenuItem>
+            <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/products">
+              Export
+            </MenuItem>
+          </Menu>
+
+          {pages.map((page) => (
+            <Button key={page} color="inherit" component={NavLink} to={`/${page.toLowerCase().replace(' ', '-')}`}>
+              {page}
+            </Button>
+          ))}
+
+         
+          <IconButton color="inherit" onClick={handleSearchToggle}>
+            <SearchIcon />
+          </IconButton>
+        </Box>
+
+        <Box sx={{ display: isSearchOpen ? 'flex' : 'none', flexDirection: 'column', alignItems: 'center', marginLeft: 'auto', padding: '5px'}}>
+          <InputBase
+            placeholder="Search..."
+            sx={{
+              border: '1px solid #ccc',
+              borderRadius: '4px',
+              padding: '5px',
+              minWidth: '100px',
+              marginBottom: '5px',
+            }}
+          />
+        </Box>
+
+        {/* Search icon for smaller screens */}
+        <Box sx={{ display: { xs: 'flex', md: 'none' }, marginLeft: 'auto' }}>
+          <IconButton color="inherit" onClick={handleSearchToggle}>
+            <SearchIcon />
+          </IconButton>
+        </Box>
+
+        <Menu
+          anchorEl={isMenuOpen}
+          open={Boolean(isMenuOpen)}
+          onClose={handleMenuClose}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'left',
+          }}
+          sx={{ display: { xs: 'block', md: 'none' } }}
+        >
+          <MenuItem onClick={handleMenuClose} component={NavLink} to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            Home
+          </MenuItem>
+
+          <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/products">
+            Import
+          </MenuItem>
+          <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/import">
+            Export
+          </MenuItem>
+
+          {pages.map((page) => (
+            <MenuItem key={page} onClick={handleMenuClose} component={NavLink} to={`/${page.toLowerCase().replace(' ', '-')}`}>
+              {page}
+            </MenuItem>
+          ))}
+        </Menu>
+      </Toolbar>
+    </AppBar>
   );
 }
 

@@ -1,38 +1,32 @@
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import Will from '../assets/base1.png';
-import Quality from '../assets/quality.png';
-import Responseviness from '../assets/respons.png';
-import Trust from '../assets/base3.png';
-import Relations from '../assets/respons.png';
+import delImage from '../assets/del.png';
+import cannonImage from '../assets/cannon.png';
+import ciscoImage from '../assets/cisco.png';
+import HP from '../assets/hp.png'
+import SinerLine from '../assets/sinarline-copy.png'
+import Richo from '../assets/ricoh-copy.png'
+import Unomat from '../assets/unomat-copy.png'
+import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg'
 import '../styles/product.css';
 
 const productsData = [
   [
-    { name: 'White pea bean', image: Will },
-    { name: 'Red kidney bean', image: Quality },
-    { name: 'Soy bean', image: Responseviness },
-    { name: 'Chickpea', image: Trust },
-    { name: 'White kidney bean', image: Relations },
+    { name: 'DELL', image: delImage },
+    { name: 'CANON', image: cannonImage },
+    { name: 'CISCO', image: ciscoImage },
+    { name: 'HP', image: HP },
   ],
   [
-    { name: 'Pigeon bean', image: Will },
-    { name: 'Green mung bean', image: Quality },
-    { name: 'Red speckled bean', image: Responseviness },
-    { name: 'Whitish humera sesame', image: Trust },
-    { name: 'Pinto beans', image: Relations },
-  ],
-  [
-    { name: 'Peanut', image: Will },
-    { name: 'Turmeric finger', image: Quality },
-    { name: 'Black cumin', image: Responseviness },
-    { name: 'Long pepper', image: Trust },
-    { name: 'Linseed/flaxseed', image: Relations },
+    { name: 'SINER', image: SinerLine },
+    { name: 'RICHO', image: Richo },
+    { name: 'UNONAT', image: Unomat },
+    { name: 'PRINTER', image: Printer },
   ],
 ];
 
-export default function Products() {
+export default function Import() {
   return (
     <>
       {productsData.map((row, rowIndex) => (
@@ -60,8 +54,6 @@ export default function Products() {
                 sx={{
                   width: '70%',  
                   height: '80%',
-                  border: '2px solid #000',
-                  borderRadius: '50%',
                   overflow: 'hidden',
                 }}
               />

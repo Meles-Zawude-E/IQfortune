@@ -87,11 +87,12 @@ body {
   margin: 0 auto;
 }
 
-.center-head .col-lg-4,
+.center-head .col-lg-4, .col-lg-6,
 .other-center li {
   text-align: center;
   position: relative;
 }
+
 
 .center-head img,
 .other-center li img {
@@ -228,7 +229,6 @@ a {
   clear: both;
   display: table;
 }
-/* Your existing CSS code */
 
 @media (max-width: 480px) {
   .first-face {
@@ -238,7 +238,7 @@ a {
   .text-column p {
     text-align: center;
     margin-left: auto;
-    justify-content: center; /* This line should be removed */
+    justify-content: center;
   }
 
   @media (max-width: 320px) {
@@ -312,6 +312,3 @@ a {
     text-align: center;
   }
 }
-
-
-

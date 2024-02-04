@@ -8,6 +8,8 @@ import ContactUs from './pages/ContactUs';
 import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Blogs from './pages/Blogs';
+import Request from './pages/Request';
+import Import from './pages/Import';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/blog" element={<Blogs />} />
+          <Route path="/request" element={<Request/>} />
+          <Route path="/import" element={<Import />} />
         </Routes>
 
         <Footer />
