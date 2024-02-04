@@ -74,7 +74,14 @@ function Header() {
           </Menu>
 
           {pages.map((page) => (
-            <Button key={page} color="inherit" component={NavLink} to={`/${page.toLowerCase().replace(' ', '-')}`}>
+            <Button key={page} color="inherit" component={NavLink} to={`/${page.toLowerCase().replace(' ', '-')}`}
+            sx={{
+              '&:hover':{
+                backgroundColor:"#0d6efd",
+                color:'white'
+              }
+            }}
+            >
               {page}
             </Button>
           ))}
@@ -89,11 +96,12 @@ function Header() {
           <InputBase
             placeholder="Search..."
             sx={{
-              border: '1px solid #ccc',
+              border: '0.5px solid #ccc',
               borderRadius: '4px',
               padding: '5px',
               minWidth: '100px',
               marginBottom: '5px',
+              backgroundColor:'white'
             }}
           />
         </Box>

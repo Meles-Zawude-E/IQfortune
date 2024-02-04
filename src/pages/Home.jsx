@@ -24,7 +24,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/css';
 import { Card, CardContent, Typography, Button, Grid } from '@mui/material';
 
-// import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 export default function Home() {
   const stripedRowImages = [delImage, cannonImage, ciscoImage,  HP, SinerLine, Richo, Unomat];
 
@@ -32,7 +31,7 @@ export default function Home() {
     type: 'slide',
     width: '100%',
     perPage: 5,
-    pagination: false, // Disable pagination if not needed
+    pagination: false,
     autoplay: {
       enabled: true,
     },
@@ -57,7 +56,7 @@ export default function Home() {
           <Button variant="contained" component="button" color='primary' size='large' >
            <Link href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html" 
            color="inherit" style={{textDecoration: "none",}}>
-            BIGGER
+            Export
            </Link>
           </Button>  
             </CardContent>
