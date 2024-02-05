@@ -21,11 +21,7 @@ export default function Services() {
       { image: Setting, description: 'Servicing sold printers, computers, Copy Machines, and Duplicators' },
       { image: Skech, description: 'We Sell Inks and Toners' },
     ],
-    [
-      { image: Landmark, description: 'We refill toner cartridges and Inks' },
-      { image: Setting, description: 'Servicing sold printers, computers, Copy Machines, and Duplicators' },
-      { image: Skech, description: 'We Sell Inks and Toners' },
-    ],
+   
   ];
 
   return (

@@ -1,4 +1,18 @@
-h1{
-    color: rebeccapurple;
-    text-align: center;
-}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .spinning-card {
+    animation: spin 20s infinite linear;
+    background-color: red;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .white {
+    background-color: white;
+  }
+  

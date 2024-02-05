@@ -50,7 +50,7 @@ const Products = () => {
 <>
   <Grid container spacing={1} style={{ margin:'20px' }}>
     <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
-      <Card style={{ height: '300px', width: "90%", backgroundRepeat: 'no-repeat', opacity: 1, backgroundSize: 'cover', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <Card  style={{ height: '300px', width: "90%", backgroundRepeat: 'no-repeat', opacity: 1, backgroundSize: 'cover', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         
         <CardContent>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
@@ -111,8 +111,8 @@ const Products = () => {
           src={product.image}
           className="avatar"
           sx={{
-            width: '70%',
-            height: '80%',
+            width: '150px', 
+            height: '150px',
             border: '2px solid #000',
             borderRadius: '50%',
             overflow: 'hidden',
