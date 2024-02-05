@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -6,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import CardMedia from '@mui/material/CardMedia';
 import Stack from '@mui/material/Stack';
-import { useMediaQuery } from '@mui/material';
 import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
 import SinerLine from '../assets/images/landmark-1.png';
 import Richo from '../assets/images/settings-1.png';
@@ -18,6 +16,9 @@ const CardSection = ({ text, style }) => (
     flexDirection: 'column', 
     margin: '10px', 
     ...style,
+    '@media (max-width: 600px)': {
+      maxWidth: '100%',
+    },
   }}>
     <CardContent style={{ textAlign: 'center', width: '100%' }}>
       <Typography variant="body1" style={{ textAlign: 'justify' }}>
@@ -42,12 +43,15 @@ const productsData = [
 
 const ParagraphCard = ({ text }) => (
   <Card style={{ 
-    margin: '26px',
+    margin: '10px',
     width: '100%', 
-    maxWidth: '600px',
+    maxWidth: '500px',
     height: '300px',
     textAlign: 'center',
     alignItems: 'center',
+    '@media (max-width: 600px)': {
+      margin: '10px',
+    },
   }}>
     <CardContent>
       <Typography variant="body1" style={{ textAlign: 'justify', alignItems: 'center' }}>
@@ -65,8 +69,11 @@ const ImageCard = ({ image, imageHeight, imageWidth }) => (
   <Card style={{ 
     margin: '26px',
     width: '100%', 
-    maxWidth: '600px',
+    maxWidth: '500px',
     height: '300px',
+    '@media (max-width: 600px)': {
+      margin: '10px',
+    },
   }}>
     <CardMedia
       component="img"
@@ -86,8 +93,6 @@ ImageCard.propTypes = {
 };
 
 const AboutUs = () => {
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
-
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', textAlign: 'justify', flexWrap: 'wrap', marginTop:'50px'}}>
@@ -168,12 +173,10 @@ const AboutUs = () => {
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut tincidunt ex. Nunc ac justo et urna sagittis tristique vel eu leo. Duis ultricies tortor at est scelerisque, a interdum ex feugiat. Integer nec magna eu elit sagittis volutpat at nec sapien. Sed id efficitur nisi. Curabitur in nibh vel velit laoreet tincidunt. Maecenas aliquam, odio vel hendrerit laoreet, libero lacus venenatis mauris, nec finibus nulla nisl sit amet justo. Suspendisse potenti."
             style={{ 
               flex: 1, 
-              maxWidth: isSmallScreen ? '100%' : '350px', 
+              maxWidth: '350px', 
               margin: '10px',
               '@media (max-width: 600px)': {
-                flex: 1,
                 maxWidth: '100%',
-                margin: '10px',
               },
             }}
           />

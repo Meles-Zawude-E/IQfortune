@@ -18,7 +18,7 @@ import SinerLine from '../assets/sinarline-copy.png'
 import Richo from '../assets/ricoh-copy.png'
 import Unomat from '../assets/unomat-copy.png'
 import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg'
-import Export from '../assets/images/Export.jpg'
+// import Export from '../assets/images/Export.jpg'
 import Link from '@mui/material/Link';
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import '@splidejs/splide/css';
@@ -51,9 +51,9 @@ export default function Home() {
         
           <Grid >
         <Grid item xs={12} md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '1px' }}>
-          <Card style={{ height: '300px',width:"90%",backgroundImage:`url(${Export})`,backgroundRepeat:'no-repeat',opacity:1,backgroundSize:'cover', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}} >
+          <Card style={{ height: '300px',width:"90%",backgroundRepeat:'no-repeat',opacity:1,backgroundSize:'cover', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center'}} >
             <CardContent >
-          <Button variant="contained" component="button" color='primary' size='large' >
+          <Button variant="contained" component="button" color='error' size='large' >
            <Link href="https://en.canon-cna.com/support/consumer_products/contact_support/ethiopia.html" 
            color="inherit" style={{textDecoration: "none",}}>
             Export

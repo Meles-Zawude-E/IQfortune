@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../../assets/logo.png';
 
-const pages = ['Services', 'About Us', 'Contact Us', 'Request'];
+const pages = ['Services', 'About Us', 'Contact Us', 'Request Sample'];
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(null);
