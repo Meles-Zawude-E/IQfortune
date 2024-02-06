@@ -1,2 +1,19 @@
-
+.iconic-image {
+    object-fit: cover;
+    width: 150px; 
+    height: 150px;
+  }
   
+  .rounded-circle {
+    margin-top: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+  }
+  .values-list {
+    padding-left: 20px;
+    list-style-type: none;
+  }
+  
+  .mission-paragraph {
+    text-align: justify;
+  }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button, InputBase } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button, InputBase, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import Logo from '../../assets/logo.png';
@@ -32,6 +32,9 @@ function Header() {
     setProductsMenuOpen(null);
   };
 
+  // Use media query to check screen size
+  const isLargeScreen = useMediaQuery('(min-width:600px)');
+
   return (
     <AppBar position="sticky">
       <Toolbar>
@@ -39,11 +42,14 @@ function Header() {
           <MenuIcon />
         </IconButton>
 
-        <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', marginLeft:'80px' }}>
-          <Typography variant="h6" noWrap>
-            <img src={Logo} alt="Logo" style={{ width: '120px', height: '40px' }} />
-          </Typography>
-        </Box>
+        {/* Conditional rendering of the logo */}
+        {isLargeScreen && (
+          <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', marginLeft:'20px' }}>
+            <Typography variant="h6" noWrap>
+              <img src={Logo} alt="Logo" style={{ width: '120px', height: '40px',marginLeft:'40px' }} />
+            </Typography>
+          </Box>
+        )}
 
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           <Button color="inherit" component={NavLink} to="/" style={{ textDecoration: 'none', color: 'inherit', marginRight: '10px' }}>

@@ -17,7 +17,9 @@ import Peanut from '../assets/images/Peanuts.jpg';
 import Turmericfinger from '../assets/images/turmericFInger.jpg';
 import Blackcumin from '../assets/images/Black_cumin_seed.jpg';
 import Longpepper from '../assets/images/Long pepper.jpg';
-import Linseedflaxseed from '../assets/images/Large light brown kideny beans.jpg';
+import Linseedflaxseed from '../assets/images/Flaxseed.jpg';
+import LargeLightBrown from '../assets/images/Large light brown kideny beans.jpg';
+import NigerSeed from '../assets/images/Niger seed.jpg';
 import { Card, CardContent, Grid, Link } from '@mui/material';
 import '../styles/product.css';
 
@@ -37,94 +39,90 @@ const productsData = [
   { name: 'Black cumin', image: Blackcumin },
   { name: 'Long pepper', image: Longpepper },
   { name: 'Linseed/flaxseed', image: Linseedflaxseed },
+  { name: 'Large light brown kidney peas', image: LargeLightBrown },
+  { name: 'Niger seed', image: NigerSeed },
 ];
 
 const Products = () => {
   const [showMore, setShowMore] = useState(false);
-  const itemsPerRow = 5;
+  const itemsPerRow = 4;
   const displayedProducts = showMore ? productsData : productsData.slice(0, itemsPerRow);
 
   return (
     <>
+      <Grid container spacing={1} style={{ marginTop:'16px' }}>
+        <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
+          <Card sx={{ height: '300px', width: "80%", backgroundRepeat: 'no-repeat', opacity: 1, backgroundSize: 'cover', borderRadius: '15px', display: 'flex', flexDirection: 'column', textAlign:'justify', border: 'none' }}>
+            <CardContent>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <Typography variant='p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Aperiam nisi dolore at maiores atque ratione voluptate delectus consequuntur 
+                dicta similique tempore ut quidem doloremque vero esse, consequatur, veritatis, eos cupiditate!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                Officiis eveniet accusantium sapiente neque est perferendis odit assumenda voluptas quaerat voluptate? Labore,
+                 hic veniam. Sit ut iusto quae vitae aliquam accusamus?</Typography>
+              </div>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center', }}>
+          <Card sx={{ height: '300px', width: "80%", backgroundRepeat: 'no-repeat', opacity: 1, backgroundSize: 'cover', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center', border: 'none' }}>
+            <CardContent>
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                <Button variant="contained" component="button" color='primary' size='large' >
+                  <Link href="https://www.instagram.com/abm_gem?igsh=MXgxOXFubGUxZjVibQ=="
+                    color="inherit" style={{ textDecoration: "none", }}>
+                    GEM STONE
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
 
-<>
-  <Grid container spacing={1} style={{ margin:'20px' }}>
-    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
-      <Card  style={{ height: '300px', width: "90%", backgroundRepeat: 'no-repeat', opacity: 1, backgroundSize: 'cover', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        
-        <CardContent>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-          <Typography variant='h4'>
-          CROPS
-
-        </Typography>
-            {productsData.length > itemsPerRow && (
-              <Button
-                variant="contained"
-                onClick={() => setShowMore(!showMore)}
-                style={{ marginTop: '20px' }}
-              >
-                {showMore ? 'Show less' : 'Show more'}
-              </Button>
-            )}
-          </div>
-        </CardContent>
-      </Card>
-    </Grid>
-    <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'center' }}>
-      <Card style={{ height: '300px', width: "90%", backgroundRepeat: 'no-repeat', opacity: 1, backgroundSize: 'cover', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-        <CardContent>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            <Button variant="contained" component="button" color='primary' size='large' >
-              <Link href="https://www.instagram.com/abm_gem?igsh=MXgxOXFubGUxZjVibQ=="
-                color="inherit" style={{ textDecoration: "none", }}>
-                GEM STONE
-              </Link>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </Grid>
-  </Grid>
-
-  <Stack
-    direction="row"
-    justifyContent="center"
-    alignItems="center"
-    flexWrap="wrap"
-    style={{ marginTop: '40px', padding: '20px' }}
-  >
-    {displayedProducts.map((product, index) => (
       <Stack
-        key={index}
-        direction="column"
+        direction="row"
+        justifyContent="space-between"
         alignItems="center"
-        spacing={1}
-        sx={{
-          width: `${100 / itemsPerRow}%`,
-          '@media (min-width: 600px)': { width: `${100 / itemsPerRow}%` },
-          '@media (min-width: 768px)': { width: `${100 / itemsPerRow}%` },
-        }}
+        flexWrap="wrap"
+        spacing={2}
+        style={{ marginTop: 'auto', padding: '20px' }}
       >
-        <Avatar
-          alt={product.name}
-          src={product.image}
-          className="avatar"
-          sx={{
-            width: '150px', 
-            height: '150px',
-            border: '2px solid #000',
-            borderRadius: '50%',
-            overflow: 'hidden',
-          }}
-        />
-        <Typography variant="subtitle1">{product.name}</Typography>
+        {displayedProducts.map((product, index) => (
+          <Card key={index} style={{ width: '100%', maxWidth: '250px', marginTop:'10px', textAlign: 'center', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)', transition: '0.3s', borderRadius: '15px'}}>
+            <CardContent >
+              <Avatar
+                alt={product.name}
+                src={product.image}
+                className="avatar"
+                sx={{
+                  width: '150px',
+                  height: '150px',
+                  border: '2px solid #000',
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  margin:'auto'
+                  
+                }}
+              />
+              <Typography variant="subtitle1" style={{ marginTop: '10px' }}>{product.name}</Typography>
+            </CardContent>
+          </Card>
+        ))}
       </Stack>
-    ))}
-  </Stack>
-</>
+
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <Button
+          class="glow-on-hover"
+          variant="contained"
+          type='button'
+          onClick={() => setShowMore(!showMore)}
+        >
+          {showMore ? 'Show less' : 'Show more'}
+        </Button>
+      </div>
     </>
   );
 }
-
 export default Products;
