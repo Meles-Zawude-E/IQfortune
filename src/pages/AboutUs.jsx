@@ -8,21 +8,21 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
   return (
     <div className="container">
       <div className="row mt-5">
-        <div className="col-lg-6 mt-4">
+        <div className="col-lg-5 mt-4" style={{marginRight:'30px'}}>
           <h1 style={headingStyle}>Who we Are</h1>
           <p style={paragraphStyle}>Who we are IQ Fortune Advanced Technology PLC was founded in 2004 and is a distributor of 
             computer components, printers, copiers, toners, cartridges, papers, and all kinds of inks. As our reputation has grown and our financial capacity has expanded,
             IQ Fortune has now expanded into the exportation of oilseeds, pulses, and spices.</p>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6" style={{marginLeft:'60px'}}>
           <img src={Printer} alt="" style={imageStyle} />
         </div>
       </div>
-      <div className="row mt-5">
+      <div className="row" style={{ marginTop:'50px'}}>
         <div className="col-lg-6 ">
           <img src={Printer} alt="" style={imageStyle} />
         </div>
-        <div className="col-lg-6 mt-5">
+        <div className="col-lg-5 " style={{marginLeft:'60px', marginTop:'50px'}}>
           <h1 style={headingStyle}>Why work with us</h1>
           <p style={paragraphStyle}>
             1. The company has more than 15 years of experience in retaining loyal customers through quality customer service and undeniable product quality.<br />
@@ -32,19 +32,19 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-lg-6 mt-5 ">
+        <div className="col-lg-5 mt-5 "  style={{ marginTop:'50px'}}>
           <h1 style={headingStyle}>Our Building</h1>
           <p style={paragraphStyle}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eius expedita, 
             sequi dolorem in commodi itaque, voluptatibus fuga eum laudantium quaerat consequuntur ipsum.
              Quos alias optio facere vitae cum ad!</p>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 " style={{ marginLeft:'50px'}}>
           <img src={Building} alt="" style={imageStyle} />
         </div>
       </div>
 
       <div className="row mt-5">
-      <div className="col-lg-6">
+      <div className="col-lg-6" >
           <div className="card">
             <img src={Vission} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
