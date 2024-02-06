@@ -1,7 +1,7 @@
 
 import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
- import SinerLine from '../assets/images/landmark-1.png';
- import Richo from '../assets/images/settings-1.png';
+ import Value from '../assets/images/values.png';
+ import Vission from '../assets/images/Vision.png';
  import Building from '../assets/images/ourBuilding.jpg';
  import '../styles/aboutUs.css'
  const AboutUs = () => {
@@ -46,7 +46,7 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
       <div className="row mt-5">
       <div className="col-lg-6">
           <div className="card">
-            <img src={Richo} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Vission} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
               <h4 className="card-title">Mission</h4>
               <p className="card-text mission-paragraph">Our mission is to seamlessly integrate cutting-edge technology solutions 
@@ -58,7 +58,7 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
         </div>
         <div className="col-lg-6">
           <div className="card">
-            <img src={SinerLine} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Value} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
               <h4 className="card-title">Values</h4>
               <ul className="list-unstyled values-list">
