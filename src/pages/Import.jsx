@@ -1,67 +1,85 @@
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+
 import delImage from '../assets/del.png';
 import cannonImage from '../assets/cannon.png';
 import ciscoImage from '../assets/cisco.png';
-import HP from '../assets/hp.png'
-import SinerLine from '../assets/sinarline-copy.png'
-import Richo from '../assets/ricoh-copy.png'
-import Unomat from '../assets/unomat-copy.png'
-import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg'
+import HP from '../assets/hp.png';
+import SinerLine from '../assets/sinarline-copy.png';
+import Richo from '../assets/ricoh-copy.png';
+import Unomat from '../assets/unomat-copy.png';
+import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
 import '../styles/product.css';
-
-const productsData = [
-  [
-    { name: 'DELL', image: delImage },
-    { name: 'CANON', image: cannonImage },
-    { name: 'CISCO', image: ciscoImage },
-    { name: 'HP', image: HP },
-  ],
-  [
-    { name: 'SINER', image: SinerLine },
-    { name: 'RICHO', image: Richo },
-    { name: 'UNONAT', image: Unomat },
-    { name: 'PRINTER', image: Printer },
-  ],
-];
 
 export default function Import() {
   return (
-    <>
-      {productsData.map((row, rowIndex) => (
-        <Stack
-          key={rowIndex}
-          direction="row"
-          spacing={2} 
-          justifyContent="center"
-          alignItems="center"
-          flexWrap="wrap"
-          style={{marginTop:'40px', padding:'20px'}}
-        >
-          {row.map((product, index) => (
-            <Stack
-              key={index}
-              direction="column"
-              alignItems="center"
-              spacing={1}
-              sx={{ width: '100%', '@media (min-width: 600px)': { width: '48%' }, '@media (min-width: 768px)': { width: '15%' } }}
-            >
-              <Avatar
-                alt={product.name}
-                src={product.image}
-                className="avatar"
-                sx={{
-                  width: '70%',  
-                  height: '80%',
-                  overflow: 'hidden',
-                }}
-              />
-              <Typography variant="subtitle1">{product.name}</Typography>
-            </Stack>
-          ))}
-        </Stack>
-      ))}
-    </>
+    <div className="container">
+      <div className="row mt-4">
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={delImage} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">DELL</h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={cannonImage} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">CANON</h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={ciscoImage} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">CISCO</h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={HP} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">HP</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={SinerLine} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">SINER</h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={Richo} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">RICHO</h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={Unomat} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">UNONAT</h4>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-3 mb-4">
+          <div className="card">
+            <img src={Printer} alt="" className="card-img-top rounded-circle iconic-image" />
+            <div className="card-body">
+              <h4 className="card-title">PRINTER</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -142,13 +142,13 @@ export default function Home() {
         </div>
         <div className='row'>
           <div className='center-head'>
-            <div className='col-lg-6'>
+            <div className='col-lg-4'>
               <img src={Trust} alt="" className='img-circle' />
               <div className="badge">04</div>
               <h4>Trust</h4>
               <p>Building trust with customers through transparent and ethical business practices.</p>
             </div>
-            <div className='col-lg-6'>
+            <div className='col-lg-4'>
               <img src={Relations} alt="" />
               <div className="badge">05</div>
               <h4>Customer Relations</h4>

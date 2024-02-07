@@ -6,6 +6,7 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
  import '../styles/aboutUs.css'
  const AboutUs = () => {
   return (
+    <>
     <div className="container">
       <div className="row mt-5">
         <div className="col-lg-5 mt-4" style={{margin:'auto'}}>
@@ -75,6 +76,7 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
        
       </div>
     </div>
+    </>
   );
 };
 
