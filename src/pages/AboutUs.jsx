@@ -20,7 +20,7 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
         </div>
       </div>
       <div className="row" style={{ marginTop:'50px'}}>
-        <div className="col-lg-6 ">
+        <div className="col-lg-6" style={{ margin:'auto'}}>
           <img src={Printer} alt="" style={imageStyle} />
         </div>
         <div className="col-lg-5 " style={{margin:'auto', marginTop:'50px'}}>
@@ -33,13 +33,13 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
         </div>
       </div>
       <div className="row mt-5">
-        <div className="col-lg-5 mt-5 "  style={{ marginTop:'50px'}}>
+        <div className="col-lg-6 mt-5"  style={{ margin:'auto'}}>
           <h1 style={headingStyle}>Our Building</h1>
           <p style={paragraphStyle}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eius expedita, 
             sequi dolorem in commodi itaque, voluptatibus fuga eum laudantium quaerat consequuntur ipsum.
              Quos alias optio facere vitae cum ad!</p>
         </div>
-        <div className="col-lg-6 " style={{ margin:'auto'}}>
+        <div className="col-lg-6" style={{ margin:'auto'}}>
           <img src={Building} alt="" style={imageStyle} />
         </div>
       </div>

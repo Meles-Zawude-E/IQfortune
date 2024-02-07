@@ -27,7 +27,7 @@ const Products = () => {
     if (showMore) {
       setRowsToShow(1);
     } else {
-      setRowsToShow(Infinity); 
+      setRowsToShow(Infinity); // Show all rows
     }
   };
 
@@ -44,10 +44,10 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6 justify-content-center align-items-center">
           <div className="card">
             <div className="card-body">
-              <a href="https://www.instagram.com/abm_gem?igsh=MXgxOXFubGUxZjVibQ==" className="btn btn-primary"> GEM STONE</a>
+             <button className='btn btn-primary '> <a href="https://www.instagram.com/abm_gem?igsh=MXgxOXFubGUxZjVibQ==" className="btn btn-primary"> GEM STONE</a></button>
             </div>
           </div>
         </div>
