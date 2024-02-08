@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button, InputBase, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+
 import Logo from '../../assets/logo.png';
 
 const pages = ['Services', 'About Us', 'Contact Us', 'Request'];
@@ -32,17 +33,14 @@ function Header() {
     setProductsMenuOpen(null);
   };
 
-  // Use media query to check screen size
   const isLargeScreen = useMediaQuery('(min-width:600px)');
 
   return (
-    <AppBar position="sticky">
-      <Toolbar>
+    <AppBar position="sticky" style={{ background: 'linear-gradient(to bottom, #34314c, #0d5f75)', height: '80px' }}>
+      <Toolbar style={{marginTop:'13px', marginRight:'50px'}}>
         <IconButton color="inherit" onClick={handleMenuOpen} sx={{ marginRight: '10px', display: { xs: 'block', md: 'none' } }}>
           <MenuIcon />
         </IconButton>
-
-        {/* Conditional rendering of the logo */}
         {isLargeScreen && (
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', marginLeft:'20px' }}>
             <Typography variant="h6" noWrap>
@@ -83,7 +81,6 @@ function Header() {
             <Button key={page} color="inherit" component={NavLink} to={`/${page.toLowerCase().replace(' ', '-')}`}
             sx={{
               '&:hover':{
-                backgroundColor:"#0d6efd",
                 color:'white'
               }
             }}

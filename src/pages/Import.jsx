@@ -17,7 +17,6 @@ export default function Import() {
           <div className="card">
             <img src={delImage} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">DELL</h4>
             </div>
           </div>
         </div>
@@ -25,7 +24,6 @@ export default function Import() {
           <div className="card">
             <img src={cannonImage} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">CANON</h4>
             </div>
           </div>
         </div>
@@ -33,7 +31,6 @@ export default function Import() {
           <div className="card">
             <img src={ciscoImage} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">CISCO</h4>
             </div>
           </div>
         </div>
@@ -41,7 +38,6 @@ export default function Import() {
           <div className="card">
             <img src={HP} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">HP</h4>
             </div>
           </div>
         </div>
@@ -51,7 +47,6 @@ export default function Import() {
           <div className="card">
             <img src={SinerLine} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">SINER</h4>
             </div>
           </div>
         </div>
@@ -59,7 +54,6 @@ export default function Import() {
           <div className="card">
             <img src={Richo} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">RICHO</h4>
             </div>
           </div>
         </div>
@@ -67,7 +61,6 @@ export default function Import() {
           <div className="card">
             <img src={Unomat} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">UNONAT</h4>
             </div>
           </div>
         </div>
@@ -75,7 +68,6 @@ export default function Import() {
           <div className="card">
             <img src={Printer} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
-              <h4 className="card-title">PRINTER</h4>
             </div>
           </div>
         </div>
