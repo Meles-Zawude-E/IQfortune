@@ -1,16 +1,13 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button, InputBase, useMediaQuery } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Box, Menu, MenuItem, Button, useMediaQuery } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 
 import Logo from '../../assets/logo.png';
-
-const pages = ['Services', 'About Us', 'Contact Us', 'Request'];
+const pages = ['Services', 'About Us', 'Contact Us', 'Request Sample'];
 
 function Header() {
   const [isMenuOpen, setMenuOpen] = useState(null);
-  const [isSearchOpen, setSearchOpen] = useState(false);
   const [isProductsMenuOpen, setProductsMenuOpen] = useState(null);
 
   const handleMenuOpen = (event) => {
@@ -19,10 +16,6 @@ function Header() {
 
   const handleMenuClose = () => {
     setMenuOpen(null);
-  };
-
-  const handleSearchToggle = () => {
-    setSearchOpen(!isSearchOpen);
   };
 
   const handleProductsMenuOpen = (event) => {
@@ -89,31 +82,6 @@ function Header() {
             </Button>
           ))}
 
-         
-          <IconButton color="inherit" onClick={handleSearchToggle}>
-            <SearchIcon />
-          </IconButton>
-        </Box>
-
-        <Box sx={{ display: isSearchOpen ? 'flex' : 'none', flexDirection: 'column', alignItems: 'center', marginLeft: 'auto', padding: '5px'}}>
-          <InputBase
-            placeholder="Search..."
-            sx={{
-              border: '0.5px solid #ccc',
-              borderRadius: '4px',
-              padding: '5px',
-              minWidth: '100px',
-              marginBottom: '5px',
-              backgroundColor:'white'
-            }}
-          />
-        </Box>
-
-        {/* Search icon for smaller screens */}
-        <Box sx={{ display: { xs: 'flex', md: 'none' }, marginLeft: 'auto' }}>
-          <IconButton color="inherit" onClick={handleSearchToggle}>
-            <SearchIcon />
-          </IconButton>
         </Box>
 
         <Menu

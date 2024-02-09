@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import gemstoneImage from '../assets/images/gemstone.jpg';
 import WhitePea from '../assets/images/White_peas_been.jpg';
 import ReadKidneyBeen from '../assets/images/red_kidney_beans.jpg';
 import SoyBeen from '../assets/images/soy_beans.jpg';
@@ -17,7 +18,6 @@ import Linseedflaxseed from '../assets/images/Flaxseed.jpg';
 import LargeLightBrown from '../assets/images/Large light brown kideny beans.jpg';
 import NigerSeed from '../assets/images/Niger seed.jpg';
 
-
 const Products = () => {
   const [showMore, setShowMore] = useState(false);
   const [rowsToShow, setRowsToShow] = useState(1);
@@ -27,7 +27,7 @@ const Products = () => {
     if (showMore) {
       setRowsToShow(1);
     } else {
-      setRowsToShow(Infinity); // Show all rows
+      setRowsToShow(Infinity);
     }
   };
 
@@ -44,10 +44,10 @@ const Products = () => {
             </div>
           </div>
         </div>
-        <div className="col-lg-6 justify-content-center align-items-center">
-          <div className="card">
+        <div className="col-lg-6">
+          <div className="card" style={{backgroundImage: `url(${gemstoneImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
             <div className="card-body">
-             <button className='btn btn-primary '> <a href="https://www.instagram.com/abm_gem?igsh=MXgxOXFubGUxZjVibQ==" className="btn btn-primary"> GEM STONE</a></button>
+             <button className='btn btn-info mt-3'> <a href="https://www.instagram.com/abm_gem?igsh=MXgxOXFubGUxZjVibQ==" className="btn btn-info" style={{color:'white'}}> GEM STONE</a></button>
             </div>
           </div>
         </div>

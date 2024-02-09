@@ -1,5 +1,6 @@
 
 import { Card, CardContent, Typography, Button, Grid } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import Building from '../assets/images/building-1.png';
 import Consaltation from '../assets/images/consultation-1.png';
@@ -31,9 +32,10 @@ export default function Services() {
           <Card style={{ height: '300px', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <CardContent style={{ textAlign: 'center' }}>
               <Typography variant="h4" gutterBottom className='h4'> 
+              
                 Export Products
               </Typography>
-              <Button variant="contained" color="primary" style={{ marginTop: '10px' }}>
+              <Button variant="contained" color="primary" component={NavLink} to="/products" style={{ marginTop: '10px' }}>
                 <ExitToAppIcon />
               </Button>
             </CardContent>

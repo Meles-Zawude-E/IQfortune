@@ -6,7 +6,7 @@ import HP from '../assets/hp.png';
 import SinerLine from '../assets/sinarline-copy.png';
 import Richo from '../assets/ricoh-copy.png';
 import Unomat from '../assets/unomat-copy.png';
-import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
+import Epison from '../assets/epsonlogo.png'
 import '../styles/product.css';
 
 export default function Import() {
@@ -66,11 +66,12 @@ export default function Import() {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={Printer} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Epison} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );
