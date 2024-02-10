@@ -38,15 +38,17 @@ export default function Home() {
 
   const splideOptionss = {
     type: 'slide',
-    heightRatio: 0.4,
+    heightRatio: 0.5,
     pagination: false,
+    width:'100%',
+    height:530, 
     rewind: true,
+    rewindByDrag: true,
     autoplay: {
       enabled:true,
       delay: 5000,
     },
   };
-  
   return (
     <> 
     <Splide options={splideOptionss} className="background-slider">
@@ -85,9 +87,6 @@ export default function Home() {
           ))}
         </Splide>
       </div>
-
-      <hr style={{ color: "red" }} />
-      <hr />
 
       <div className="container mt-5 border border-light mb-5 disp-card">
         <div className="row">
