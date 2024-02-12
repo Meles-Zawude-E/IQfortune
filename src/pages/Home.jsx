@@ -51,6 +51,7 @@ export default function Home() {
   };
   return (
     <> 
+    <section className="hero">
     <Splide options={splideOptionss} className="background-slider">
         <SplideSlide>
           <div className="hero-page" style={{ background: 'linear-gradient(to bottom, #34314c, #0d5f75)'}}>
@@ -78,7 +79,8 @@ export default function Home() {
           </div>
         </SplideSlide>
       </Splide>
-      <div className=' container mt-5'>
+    </section>
+      <div className='container mt-5'>
         <Splide options={splideOptions} className="custom-splide mx-auto">
           {stripedRowImages.map((image, index) => (
             <SplideSlide key={index} >
@@ -90,7 +92,7 @@ export default function Home() {
 
       <div className="container mt-5 border border-light mb-5 disp-card">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mt-3">
             <div className="card">
               <img src={greatCan} alt="Mike" className="card-img-top img-fluid"/>
               <div className="card-body">
@@ -99,7 +101,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-md-4 mt-3">
             <div className="card">
               <img src={BigEpson} alt="Jane" className="card-img-top img-fluid"/>
               <div className="card-body">
@@ -108,7 +110,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-md-4 mt-3">
             <div className="card">
               <img src={Buiding} alt="John" className="card-img-top img-fluid"/>
               <div className="card-body">

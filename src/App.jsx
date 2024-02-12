@@ -28,7 +28,7 @@ function App() {
           <Route path="/import" element={<Import />} />
         </Routes>
 
-        <Footer />
+        <Footer/>
       </div>
     </Router>
   );

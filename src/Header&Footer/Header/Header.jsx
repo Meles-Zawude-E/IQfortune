@@ -102,10 +102,10 @@ function Header() {
             Home
           </MenuItem>
 
-          <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/products">
+          <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/import ">
             Import
           </MenuItem>
-          <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/import">
+          <MenuItem onClick={handleProductsMenuClose} component={NavLink} to="/products">
             Export
           </MenuItem>
 
