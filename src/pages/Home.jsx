@@ -41,7 +41,7 @@ export default function Home() {
     heightRatio: 0.5,
     pagination: false,
     width:'100%',
-    height:530, 
+    height:'100%',
     rewind: true,
     rewindByDrag: true,
     autoplay: {
