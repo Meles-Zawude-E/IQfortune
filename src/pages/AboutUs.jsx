@@ -1,9 +1,8 @@
 
 import Printer from '../assets/images/about-image.jpg';
- import Value from '../assets/images/values.png';
- import Vission from '../assets/images/Vision.png';
- import Building from '../assets/images/ourBuilding.jpg';
- import '../styles/aboutUs.css'
+import Vission from '../assets/images/view.jpg';
+import Building from '../assets/images/ourBuilding.jpg';
+import '../styles/aboutUs.css'
  const AboutUs = () => {
   return (
     <>
@@ -48,7 +47,7 @@ import Printer from '../assets/images/about-image.jpg';
         </div>
         <div className="col-lg-6">
           <div className="card">
-            <img src={Value} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Vission} alt="" className="card-img-top rounded-circle iconic-image" />
             <div className="card-body">
               <h4 className="card-title">Values</h4>
               <ul className="list-unstyled values-list">
@@ -62,7 +61,6 @@ import Printer from '../assets/images/about-image.jpg';
             </div>
           </div>
         </div>
-       
       </div>
     </div>
     </>

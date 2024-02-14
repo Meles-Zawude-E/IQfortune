@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { TextField, Button, Typography, Box, FormControl, InputLabel, Select, MenuItem } from "@mui/material";
-
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2'
 export default function Request() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -8,9 +9,36 @@ export default function Request() {
   const [message, setMessage] = useState("");
   const [selectedItem, setSelectedItem] = useState("");
 
-  const handleSubmit = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
+
+    emailjs
+      .sendForm('service_cydevlu', 'template_ersm2cw', e.target, {
+        publicKey: 'LKvK1f9wXESHkymre',
+      })
+      .then(
+        
+        () => {
+          console.log('SUCCESS!');
+          Swal.fire({
+            icon:'success',
+            title:'message sent successfully'
+          })
+        },
+       
+        (error) => {
+          console.log('FAILED...', error.text);
+          Swal.fire({
+            icon:'error',
+            title:'Ooops something want wrong',
+            text:error.text
+          })
+        },
+      );
   };
+
 
   const dropdownItems = [
     { label: "White pea bean", value: "whitePeaBean" },
@@ -42,15 +70,16 @@ export default function Request() {
       >
         <Box sx={{ maxWidth: 600, mx: "auto", p: 2 }}>
           <Typography variant="h4" align="center" mb={2}>
-           Request Form
+           Request Sample
           </Typography>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={sendEmail}>
             <TextField
               fullWidth
               label="Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               margin="normal"
+              name="from_name"
               required
             />
             <TextField
@@ -59,6 +88,7 @@ export default function Request() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               margin="normal"
+              name="from_eamil"
               required
             />
 
@@ -69,6 +99,7 @@ export default function Request() {
               onChange={(e) => setSubject(e.target.value)}
               margin="normal"
               required
+              name="phone"
               type="phone"
             />
 
@@ -97,6 +128,7 @@ export default function Request() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               margin="normal"
+              name="message"
               required
               multiline
               rows={4}

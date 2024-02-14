@@ -85,10 +85,10 @@ export default function Home() {
         <SplideSlide>
           <div className="hero-page" style={{ background: 'linear-gradient(to bottom, #34314c, #0d5f75)'}}>
             <div className="hero-content">
-            <h2 style={{fontSize:'4rem'}}>Your One Stop Solution!</h2>
-              <h3>A Pioneer Business</h3>
+            <h2 style={{fontSize:'4rem'}}>From Fields to Market!</h2>
+              <h3 > Pulses oilseeds & spices</h3>
               <hr style={{ height: '2px', backgroundColor: 'white', color: 'white' }} />
-              <h3>Some other details here</h3>
+              <h3>Our export services</h3>
               <Button variant="contained" color="primary" component={NavLink} to="/products" style={{ marginTop: '10px' }}>
               <ExitToAppIcon />
               </Button>
@@ -98,17 +98,18 @@ export default function Home() {
       </Splide>
     </section>
       <div className='mt-5'>
-        <Splide options={splideOptions} className="custom-splide mx-auto">
-          {stripedRowImages.map((image, index) => (
-           <SplideSlide key={index} className="splide-slide-with-image">
-           <img
-             src={image}
-             alt={`Image ${index + 1}`}
-             className="img-fluid rounded-circle iconic-image splide-image"
-           />
-         </SplideSlide>
-          ))}
-        </Splide>
+        
+          <Splide options={splideOptions} className="custom-splide mx-auto">
+            {stripedRowImages.map((image, index) => (
+              <SplideSlide key={index} className="splide-slide-with-image">
+                <img
+                  src={image}
+                  alt={`Image ${index + 1}`}
+                  className="img-fluid rounded-circle iconic-image splide-image"
+                />
+              </SplideSlide>
+            ))}
+          </Splide>
       </div>
 
       <div className="container mt-5 border border-light mb-5 disp-card">

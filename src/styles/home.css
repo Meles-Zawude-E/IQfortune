@@ -146,7 +146,7 @@ a {
   display: table;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .center-head,
   .other-center {
     flex-direction: column;
@@ -171,6 +171,11 @@ a {
 
   .hero-content {
     max-width: 90%; /* Reduce the width for smaller screens */
+  }
+  .custom-splide {
+    .splide__slide {
+      width: calc(100% / 2);
+    }
   }
 }
 

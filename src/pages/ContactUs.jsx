@@ -62,7 +62,7 @@ export default function ContactUs() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               margin="normal"
-              name="user_name"
+              name="from_name"
               required
             />
             <TextField

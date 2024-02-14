@@ -1,13 +1,13 @@
 
 import delImage from '../assets/del.png';
-import cannonImage from '../assets/cannon.png';
+import cannonImage from '../assets/images/ogp.png';
 import ciscoImage from '../assets/cisco.png';
 import HP from '../assets/hp.png';
 import SinerLine from '../assets/sinarline-copy.png';
 import Richo from '../assets/ricoh-copy.png';
 import Unomat from '../assets/unomat-copy.png';
 import Epison from '../assets/epsonlogo.png'
-import '../styles/product.css';
+
 
 export default function Import() {
   return (

@@ -10,7 +10,7 @@ export default function Footer() {
               <ul className='foot mx-5'>
                 <strong>Menu</strong>
                 <li><i className="fa-solid fa-house"></i><a href="/" className="">  Home</a></li>
-                <li><i className="fa-solid fa-earth-americas"></i><a href="#" className="">  News</a> </li>
+                <li><i className="fa-solid fa-earth-americas"></i><a href="/products" className="">Products</a> </li>
                 <li><i className="fa-solid fa-message"></i><a href="/contact-us" className="">
                   Contact Us</a> </li>
               </ul>
@@ -31,7 +31,7 @@ export default function Footer() {
                 <li>
                   <iframe
                     title="Google Map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.575945307145!2d38.76964411051288!3d9.011109191012201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b850c9b46110b%3A0x21c14a18c9021a30!2sSugar%20Corporation!5e0!3m2!1sen!2set!4v1706702981991!5m2!1sen!2set"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4212.481270061695!2d38.746391581746416!3d9.03372467551782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f84aa3c3c1%3A0x893dcbf82049b25e!2zS2VsaWZhIEJ1c2luZXNzIENlbnRlciB8IFBpYXp6YSB8IOGKqOGIiuGNiyDhi6jhjIjhiaDhi6sg4Yib4YuV4Yqo4YiNIHwg4Y2S4Yur4Yiz!5e0!3m2!1sen!2set!4v1707906533166!5m2!1sen!2set"
                     width="100%"
                     height="150"
                     style={{ border: 0 }}
@@ -43,9 +43,8 @@ export default function Footer() {
             </div>
           </div>
           <hr />
-
           <div className="text-center">
-            <h6>&copy; Addisalem Tefera, {new Date().getFullYear()}</h6>
+            <h6>&copy;IQfortune Advanced Technology PLC, {new Date().getFullYear()}</h6>
           </div>
         </div>
       </footer>

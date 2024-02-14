@@ -9,6 +9,7 @@ import AboutUs from './pages/AboutUs';
 import Services from './pages/Services';
 import Blogs from './pages/Blogs';
 import Request from './pages/Request';
+import QRcode from './pages/QRcode';
 import Import from './pages/Import';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/blog" element={<Blogs />} />
           <Route path="/request-sample" element={<Request/>} />
           <Route path="/import" element={<Import />} />
+          <Route path="/qrcode" element={<QRcode />} />
         </Routes>
 
         <Footer/>

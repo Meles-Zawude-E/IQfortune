@@ -31,9 +31,8 @@ export default function Services() {
         <Grid item xs={12} md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '130px' }}>
           <Card style={{ height: '300px', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <CardContent style={{ textAlign: 'center' }}>
-              <Typography variant="h4" gutterBottom className='h3'> 
-              
-                Oils Seeds Pulses and Spicy
+              <Typography variant="h5" gutterBottom className='h3'> 
+              Pulses Oilseeds and Spices
               </Typography>
               <Button variant="contained" color="primary" component={NavLink} to="/products" style={{ marginTop: '10px' }}>
                 <ExitToAppIcon />
