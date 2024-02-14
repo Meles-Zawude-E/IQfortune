@@ -35,24 +35,29 @@ import NigerSeed from '../assets/images/Niger seed.jpg';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {  Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
+import '@splidejs/splide/dist/css/splide.min.css';
 
 export default function Home() {
   const stripedRowImages = [delImage, cannonImage, ciscoImage,Epison, HP, SinerLine, Richo,ReadKidneyBeen,
     SoyBeen,Chickpea,WhiteKidneyBean,Pigeonbean,Greenmungbean,Redspeckledbean,Whitishhumera,Pintobeans,Peanut
     ,Turmericfinger,Blackcumin,Longpepper,Linseedflaxseed,LargeLightBrown,NigerSeed];
 
-  const splideOptions = {
-    type: 'slide',
-    width: '100%',
-    height:200,
-    perPage: 5,
-    gap:1,
-    pagination: false,
-    rewind: true,
-    autoplay: {
-      enabled: true,
-    },
-  };
+    const splideOptions = {
+      type: 'slide',
+      perPage: 4, 
+      pagination: false,
+      gap: 20,
+      rewind:true,
+      autoplay: {
+        enabled:true,
+        delay: 5000,
+      },
+      breakpoints: {
+        768: {
+          perPage: 1,
+        },
+      },
+    };
 
   const splideOptionss = {
     type: 'slide',
@@ -99,18 +104,18 @@ export default function Home() {
       </Splide>
     </section>
     <div className='mt-5'>
-        <Splide options={splideOptions} className="custom-splide mx-auto" >
-          {stripedRowImages.map((image, index) => (
-            <SplideSlide key={index} className="splide-slide-with-image" style={{marginLeft:'20px'}}>
-              <img
-                src={image}
-                alt={`Image ${index + 1}`}
-                className="img-fluid rounded-circle iconic-image splide-image"
-              />
-            </SplideSlide>
-          ))}
-        </Splide>
-      </div>
+      <Splide options={splideOptions} className="custom-splide mx-auto">
+        {stripedRowImages.map((image, index) => (
+          <SplideSlide key={index} className="splide-slide-with-image" >
+            <img style={{marginLeft:'80px'}}
+              src={image}
+              alt={`Image ${index + 1}`}
+              className="img-fluid rounded-circle iconic-image splide-image"
+            />
+          </SplideSlide>
+        ))}
+      </Splide>
+    </div>
 
       <div className="container mt-5 border border-light mb-5 disp-card">
         <div className="row">
