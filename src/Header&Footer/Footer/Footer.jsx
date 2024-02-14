@@ -10,9 +10,9 @@ export default function Footer() {
               <ul className='foot mx-5'>
                 <strong>Menu</strong>
                 <li><i className="fa-solid fa-house"></i><a href="/" className="">  Home</a></li>
-                <li><i className="fa-solid fa-earth-americas"></i><a href="/products" className="">Products</a> </li>
-                <li><i className="fa-solid fa-message"></i><a href="/contact-us" className="">
-                  Contact Us</a> </li>
+                <li><i className="fa-solid fa-earth-americas"></i><a href="/import" className="">Import</a> </li>
+                <li><i className="fa-solid fa-earth-americas"></i><a href="/products" className="">Export</a> </li>
+                
               </ul>
             </div>
 

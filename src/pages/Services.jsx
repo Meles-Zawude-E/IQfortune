@@ -1,4 +1,3 @@
-
 import { Card, CardContent, Typography, Button, Grid } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
@@ -29,7 +28,7 @@ export default function Services() {
     <div style={{ padding: '20px' }}>
       <Grid container spacing={3}>
         <Grid item xs={12} md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '130px' }}>
-          <Card style={{ height: '300px', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <Card style={{ height: '300px', width: '80%', marginLeft: 'auto', marginRight: 'auto', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <CardContent style={{ textAlign: 'center' }}>
               <Typography variant="h5" gutterBottom className='h3'> 
               Pulses Oilseeds and Spices
@@ -40,21 +39,21 @@ export default function Services() {
             </CardContent>
           </Card>
         </Grid>
-
-        <Grid item xs={12} md={8}>
+  
+        <Grid item xs={12} md={8} style={{ marginBottom: '20px' }}>
           {rowData.map((row, rowIndex) => (
-            <Grid container spacing={2} key={rowIndex}>
+            <Grid container spacing={2} key={rowIndex} style={{ marginTop: '15px' }}>
               {row.map((item, colIndex) => (
                 <Grid item xs={12} md={4} key={colIndex}>
-                  <Card style={{ marginTop: '20px', height: '260px', borderRadius: '15px' }}>
-                    <CardContent style={{ textAlign: 'center' }}>
+                  <Card style={{  height: '100%', width: '90%', marginLeft: 'auto', marginRight: 'auto', borderRadius: '15px'}}>
+                    <CardContent style={{ textAlign: 'center'}}>
                       <img
                         src={item.image}
                         alt={`Image ${rowIndex + 1}-${colIndex + 1}`}
-                        style={{ width: '80%', height: '180px', objectFit: 'cover', margin: '0 auto', borderRadius: '10px' }}
+                        style={{ width: '50%', height: 'auto', objectFit: 'cover', margin: '0 auto', borderRadius: '10px' }}
                       />
-
-                      <Typography variant="body2" style={{ marginTop: '10px', display: 'block' }}>
+  
+                      <Typography variant="body2" style={{ marginTop: '10px', display: 'block', fontWeight: 'bold' }}>
                         {item.description}
                       </Typography>
                     </CardContent>

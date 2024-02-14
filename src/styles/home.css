@@ -40,9 +40,6 @@ body {
   color: #fff;
   font-size: 20px;
 }
-.splide-slide-with-image {
-  margin-left: 20px;
-}
 
 .center-head {
   display: flex;
@@ -146,6 +143,17 @@ a {
   display: table;
 }
 
+.custom-splide {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+.splide-slide-with-image img {
+  width: 60%;
+}
+
+
 @media screen and (max-width: 768px) {
   .center-head,
   .other-center {
@@ -172,10 +180,9 @@ a {
   .hero-content {
     max-width: 90%; /* Reduce the width for smaller screens */
   }
-  .custom-splide {
-    .splide__slide {
-      width: calc(100% / 2);
-    }
+  .custom-splide .splide__slide {
+    width: calc(100% / 3); 
+    height: auto;
   }
 }
 

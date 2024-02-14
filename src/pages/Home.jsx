@@ -97,19 +97,18 @@ export default function Home() {
         </SplideSlide>
       </Splide>
     </section>
-      <div className='mt-5'>
-        
-          <Splide options={splideOptions} className="custom-splide mx-auto">
-            {stripedRowImages.map((image, index) => (
-              <SplideSlide key={index} className="splide-slide-with-image">
-                <img
-                  src={image}
-                  alt={`Image ${index + 1}`}
-                  className="img-fluid rounded-circle iconic-image splide-image"
-                />
-              </SplideSlide>
-            ))}
-          </Splide>
+    <div className='mt-5'>
+        <Splide options={splideOptions} className="custom-splide mx-auto">
+          {stripedRowImages.map((image, index) => (
+            <SplideSlide key={index} className="splide-slide-with-image">
+              <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                className="img-fluid rounded-circle iconic-image splide-image"
+              />
+            </SplideSlide>
+          ))}
+        </Splide>
       </div>
 
       <div className="container mt-5 border border-light mb-5 disp-card">
