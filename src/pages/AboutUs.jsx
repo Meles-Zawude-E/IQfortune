@@ -1,5 +1,5 @@
 
-import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
+import Printer from '../assets/images/about-image.jpg';
  import Value from '../assets/images/values.png';
  import Vission from '../assets/images/Vision.png';
  import Building from '../assets/images/ourBuilding.jpg';
@@ -16,7 +16,7 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
             IQ Fortune has now expanded into the exportation of oilseeds, pulses, and spices.</p>
         </div>
         <div className="col-lg-6" >
-          <img src={Printer} alt="" style={imageStyle} />
+        <img src={Building} alt="" style={imageStyle} />
         </div>
       </div>
       <div className="row" style={{ marginTop:'50px'}}>
@@ -30,17 +30,6 @@ import Printer from '../assets/benjamin-sander-bergum-fcLa4CNVnBQ-unsplash.jpg';
             2. We pride ourselves on our financial strength and unrestricted ability to supply products throughout the year with the highest quality products and unbeatable service.<br />
             3. Our business strategy is centered on achieving mutual benefits. We believe in cultivating prosperous relationships with our partners. To achieve this, we place great emphasis on open and effective communication, unwavering reliability, and timely delivery.
           </p>
-        </div>
-      </div>
-      <div className="row mt-5">
-        <div className="col-lg-6 mt-5"  style={{ margin:'auto'}}>
-          <h1 style={headingStyle}>Our Building</h1>
-          <p style={paragraphStyle}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eius expedita, 
-            sequi dolorem in commodi itaque, voluptatibus fuga eum laudantium quaerat consequuntur ipsum.
-             Quos alias optio facere vitae cum ad!</p>
-        </div>
-        <div className="col-lg-6" style={{ margin:'auto'}}>
-          <img src={Building} alt="" style={imageStyle} />
         </div>
       </div>
 

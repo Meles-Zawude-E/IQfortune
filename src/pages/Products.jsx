@@ -18,6 +18,8 @@ import Linseedflaxseed from '../assets/images/Flaxseed.jpg';
 import LargeLightBrown from '../assets/images/Large light brown kideny beans.jpg';
 import NigerSeed from '../assets/images/Niger seed.jpg';
 
+import '../styles/product.css'
+
 const Products = () => {
   const [showMore, setShowMore] = useState(false);
   const [rowsToShow, setRowsToShow] = useState(1);

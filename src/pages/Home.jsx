@@ -7,7 +7,6 @@ import ciscoImage from '../assets/cisco.png';
 import HP from '../assets/hp.png';
 import SinerLine from '../assets/sinarline-copy.png';
 import Richo from '../assets/ricoh-copy.png';
-import Unomat from '../assets/unomat-copy.png';
 import greatCan from '../assets/greateCanon.jpg';
 import BigEpson from '../assets/epsonbig.jpg';
 import Buiding from '../assets/biulding.jpg';
@@ -17,18 +16,36 @@ import Responseviness from '../assets/respons.png'
 import Trust from '../assets/base3.png'
 import Relations from '../assets/respons.png'
 import Epison from '../assets/epsonlogo.png'
-import Background from '../assets/images/back1.png'
+import ReadKidneyBeen from '../assets/images/red_kidney_beans.jpg';
+import SoyBeen from '../assets/images/soy_beans.jpg';
+import Chickpea from '../assets/images/Check_peas.jpg';
+import WhiteKidneyBean from '../assets/images/white_kedney_bean.jpg';
+import Pigeonbean from '../assets/images/pigon_peas.jpg';
+import Greenmungbean from '../assets/images/green_mung_been.jpg';
+import Redspeckledbean from '../assets/images/red_speakedled_beean.jpg';
+import Whitishhumera from '../assets/images/Whitish humera sesame seed.jpg';
+import Pintobeans from '../assets/images/Pinto beans.jpg';
+import Peanut from '../assets/images/Peanuts.jpg';
+import Turmericfinger from '../assets/images/turmericFInger.jpg';
+import Blackcumin from '../assets/images/Black_cumin_seed.jpg';
+import Longpepper from '../assets/images/Long pepper.jpg';
+import Linseedflaxseed from '../assets/images/Flaxseed.jpg';
+import LargeLightBrown from '../assets/images/Large light brown kideny beans.jpg';
+import NigerSeed from '../assets/images/Niger seed.jpg';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import {  Button } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 export default function Home() {
-  const stripedRowImages = [delImage, cannonImage, ciscoImage,Epison, HP, SinerLine, Richo, Unomat];
+  const stripedRowImages = [delImage, cannonImage, ciscoImage,Epison, HP, SinerLine, Richo,ReadKidneyBeen,
+    SoyBeen,Chickpea,WhiteKidneyBean,Pigeonbean,Greenmungbean,Redspeckledbean,Whitishhumera,Pintobeans,Peanut
+    ,Turmericfinger,Blackcumin,Longpepper,Linseedflaxseed,LargeLightBrown,NigerSeed];
 
   const splideOptions = {
     type: 'slide',
     width: '100%',
     perPage: 5,
+    gap:1,
     pagination: false,
     rewind: true,
     autoplay: {
@@ -56,7 +73,7 @@ export default function Home() {
         <SplideSlide>
           <div className="hero-page" style={{ background: 'linear-gradient(to bottom, #34314c, #0d5f75)'}}>
             <div className="hero-content">
-              <h2>Your One Stop Solution for Office Equipments!</h2>
+              <h2 style={{fontSize:'4rem'}}>Your One Stop Solution!</h2>
               <h3>A Pioneer Business</h3>
               <hr style={{ height: '2px', backgroundColor: 'white', color: 'white' }} />
               <h3>Authorised Canon service center</h3>
@@ -66,10 +83,10 @@ export default function Home() {
         </SplideSlide>
 
         <SplideSlide>
-          <div className="hero-page" style={{ backgroundImage: `url(${Background})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+          <div className="hero-page" style={{ background: 'linear-gradient(to bottom, #34314c, #0d5f75)'}}>
             <div className="hero-content">
-              <h2>Another Hero Page Content</h2>
-              <h3>This is Different Content</h3>
+            <h2 style={{fontSize:'4rem'}}>Your One Stop Solution!</h2>
+              <h3>A Pioneer Business</h3>
               <hr style={{ height: '2px', backgroundColor: 'white', color: 'white' }} />
               <h3>Some other details here</h3>
               <Button variant="contained" color="primary" component={NavLink} to="/products" style={{ marginTop: '10px' }}>
@@ -80,12 +97,16 @@ export default function Home() {
         </SplideSlide>
       </Splide>
     </section>
-      <div className='container mt-5'>
+      <div className='mt-5'>
         <Splide options={splideOptions} className="custom-splide mx-auto">
           {stripedRowImages.map((image, index) => (
-            <SplideSlide key={index} >
-              <img src={image} alt={`Image ${index + 1}`} className="img-fluid" />
-            </SplideSlide>
+           <SplideSlide key={index} className="splide-slide-with-image">
+           <img
+             src={image}
+             alt={`Image ${index + 1}`}
+             className="img-fluid rounded-circle iconic-image splide-image"
+           />
+         </SplideSlide>
           ))}
         </Splide>
       </div>

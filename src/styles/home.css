@@ -40,7 +40,9 @@ body {
   color: #fff;
   font-size: 20px;
 }
-
+.splide-slide-with-image {
+  margin-left: 20px;
+}
 
 .center-head {
   display: flex;

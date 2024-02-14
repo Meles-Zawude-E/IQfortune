@@ -11,32 +11,32 @@ import '../styles/product.css';
 
 export default function Import() {
   return (
-    <div className="container">
+    <div className="container mt-5">
       <div className="row mt-4">
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={delImage} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={delImage} alt="" className="card-img-top  iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={cannonImage} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={cannonImage} alt="" className="card-img-top  iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={ciscoImage} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={ciscoImage} alt="" className="card-img-top  iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={HP} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={HP} alt="" className="card-img-top  iconic-image" />
             <div className="card-body">
             </div>
           </div>
@@ -45,28 +45,28 @@ export default function Import() {
       <div className="row">
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={SinerLine} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={SinerLine} alt="" className="card-img-top iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={Richo} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Richo} alt="" className="card-img-top  iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={Unomat} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Unomat} alt="" className="card-img-top  iconic-image" />
             <div className="card-body">
             </div>
           </div>
         </div>
         <div className="col-lg-3 mb-4">
           <div className="card">
-            <img src={Epison} alt="" className="card-img-top rounded-circle iconic-image" />
+            <img src={Epison} alt="" className="card-img-top iconic-image" />
             <div className="card-body">
             </div>
           </div>

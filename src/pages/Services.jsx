@@ -31,9 +31,9 @@ export default function Services() {
         <Grid item xs={12} md={4} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '130px' }}>
           <Card style={{ height: '300px', marginLeft: '40px', borderRadius: '15px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <CardContent style={{ textAlign: 'center' }}>
-              <Typography variant="h4" gutterBottom className='h4'> 
+              <Typography variant="h4" gutterBottom className='h3'> 
               
-                Export Products
+                Oils Seeds Pulses and Spicy
               </Typography>
               <Button variant="contained" color="primary" component={NavLink} to="/products" style={{ marginTop: '10px' }}>
                 <ExitToAppIcon />
@@ -47,12 +47,12 @@ export default function Services() {
             <Grid container spacing={2} key={rowIndex}>
               {row.map((item, colIndex) => (
                 <Grid item xs={12} md={4} key={colIndex}>
-                  <Card style={{ marginTop: '20px', height: '300px', borderRadius: '15px' }}>
+                  <Card style={{ marginTop: '20px', height: '260px', borderRadius: '15px' }}>
                     <CardContent style={{ textAlign: 'center' }}>
                       <img
                         src={item.image}
                         alt={`Image ${rowIndex + 1}-${colIndex + 1}`}
-                        style={{ width: '80%', height: 'auto', objectFit: 'cover', margin: '0 auto', borderRadius: '10px' }}
+                        style={{ width: '80%', height: '180px', objectFit: 'cover', margin: '0 auto', borderRadius: '10px' }}
                       />
 
                       <Typography variant="body2" style={{ marginTop: '10px', display: 'block' }}>
