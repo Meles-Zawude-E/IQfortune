@@ -44,6 +44,7 @@ export default function Home() {
   const splideOptions = {
     type: 'slide',
     width: '100%',
+    height:200,
     perPage: 5,
     gap:1,
     pagination: false,
@@ -98,9 +99,9 @@ export default function Home() {
       </Splide>
     </section>
     <div className='mt-5'>
-        <Splide options={splideOptions} className="custom-splide mx-auto">
+        <Splide options={splideOptions} className="custom-splide mx-auto" >
           {stripedRowImages.map((image, index) => (
-            <SplideSlide key={index} className="splide-slide-with-image">
+            <SplideSlide key={index} className="splide-slide-with-image" style={{marginLeft:'20px'}}>
               <img
                 src={image}
                 alt={`Image ${index + 1}`}

@@ -178,7 +178,7 @@ a {
   }
 
   .hero-content {
-    max-width: 90%; /* Reduce the width for smaller screens */
+    max-width: 90%; 
   }
   .custom-splide .splide__slide {
     width: calc(100% / 3); 
