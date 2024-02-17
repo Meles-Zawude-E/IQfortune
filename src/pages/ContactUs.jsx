@@ -17,8 +17,8 @@ export default function ContactUs() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_cydevlu', 'template_ersm2cw', e.target, {
-        publicKey: 'LKvK1f9wXESHkymre',
+      .sendForm('service_vipc1gi', 'template_qu82b3n', e.target, {
+        publicKey: 'Asoe8Yx9sDEGDwJyw',
       })
       .then(
         

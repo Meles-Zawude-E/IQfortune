@@ -15,4 +15,8 @@
     font-size: 16px;
     margin-bottom: 5px;
   }
+  .qr-code p i{
+    margin-right: 10px;
+    font-weight: bold;
+  }
   

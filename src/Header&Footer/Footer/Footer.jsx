@@ -11,14 +11,12 @@ export default function Footer() {
                 <strong>Menu</strong>
                 <li><i className="fa-solid fa-house"></i><a href="/" className="">  Home</a></li>
                 <li><i className="fa-solid fa-earth-americas"></i><a href="/import" className="">Import</a> </li>
-                <li><i className="fa-solid fa-earth-americas"></i><a href="/products" className="">Export</a> </li>
-                
+                <li><i className="fa-solid fa-earth-americas"></i><a href="/products" className="">Export</a> </li> 
               </ul>
             </div>
-
             <div className='col-lg-4'>
               <ul className='foot'>
-                <strong>Contact Us</strong>
+                <strong className='contact'>Contact Us</strong>
                 <li><i className="fa-solid fa-location-dot"></i> Arada Sub-City, Addis Ababa</li>
                 <li><i className="fa-solid fa-phone"></i> Phone: +251911192863  </li>
                 <li><i className="fa-solid fa-envelope"></i> Email: support@iqfortune.com</li>
